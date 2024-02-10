@@ -3,7 +3,8 @@ import React from 'react';
 
 import petarkosovac from "../../assets/images/predavaci/petarkosovac.jpeg";
 import sinisa from "../../assets/images/predavaci/sinisa.jpeg";
-import casestudyclub from "../../assets/images/predavaci/casestudyclub.png";
+import srdjan from "../../assets/images/predavaci/srdjan.jpeg";
+import goran from "../../assets/images/predavaci/goran.jpeg";
 
 const SpremanZaDaneFragment = () => {
 
@@ -21,18 +22,25 @@ const SpremanZaDaneFragment = () => {
             pozicija: 'Glumac, pisac i međunarodno priznati trener ličnog razvoja',
             nazivPredavanja: "Mit o motivaciji",
         },
-        // {
-        //     imgUrl: sinisa,
-        //     ime: 'Goran Manasijević',
-        //     pozicija: 'Voditelj podcast-a "Tutorup" i moderator predavanja "Na kafi sa..."',
-        //     nazivPredavanja: "Naziv",
-        // },
         {
-            imgUrl: casestudyclub,
-            ime: 'Case study club',
-            pozicija: 'Glumac, pisac i međunarodno priznati trener ličnog razvoja',
-            nazivPredavanja: "Osnove i primena studije slučaja",
+            imgUrl: goran,
+            ime: 'Goran Manasijević',
+            pozicija: 'Voditelj podcast-a "Tutorup" i moderator predavanja "Na kafi sa..."',
+            nazivPredavanja: "Moderator predavanja “Na kafi sa…”",
         },
+        {
+            imgUrl: srdjan,
+            ime: 'Srđan Janićijević',
+            pozicija: 'Direktor i osnivač Mokrogorske',
+            nazivPredavanja: "Predavač na predavanju “Na kafi sa…”",
+        },
+        // {
+        //     imgUrl: casestudyclub,
+        //     ime: 'Case study club',
+        //     pozicija: 'Glumac, pisac i međunarodno priznati trener ličnog razvoja',
+        //     nazivPredavanja: "Osnove i primena studije slučaja",
+        // },
+
     ];
 
     return (
@@ -49,7 +57,7 @@ const SpremanZaDaneFragment = () => {
                             <div className="instructor-item">
                                 <div className="instructor-inner">
                                     <div className="">
-                                        <img src={`${val.imgUrl}`} alt="predavac"/>
+                                        <img className="img img-thumbnail" src={`${val.imgUrl}`} alt="predavac"/>
                                     </div>
                                     <div className="instructor-content panelisti-content">
                                         <h4>{val.ime}</h4>

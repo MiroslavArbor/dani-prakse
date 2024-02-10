@@ -34,7 +34,7 @@ const posaljiCV = (e) => {
     formData.append('email', email);
     formData.append('broj_telefona', telefon);
 
-    axios.post('/leave-cv', formData).then((res) => {
+    axios.post('api/leave-cv', formData).then((res) => {
         setMessage(res.data.message);
         console.log(res);
     }).catch((err) => {
