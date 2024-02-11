@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Rating from "../sidebar/rating";
-// import aftermovie from '../../assets/images/aftermovie.mov';
+ import aftermovie from '../../assets/images/aftermovie.mov';
 import galeb from '../../assets/images/galeb.jpeg';
 import meridianbet from '../../assets/images/meridijanbet.jpeg';
 
@@ -73,9 +73,9 @@ const Student = () => {
                         <div className="col">
                             <div className="sf-left">
                                 <div className="sfl-thumb">
-                                    {/* <video width="100%" height="100%" src={aftermovie} controls>
+                                    { <video width="100%" height="100%" src={aftermovie} controls>
 
-                                    </video> */}
+                                    </video> }
                                 </div>
                             </div>
                         </div>
