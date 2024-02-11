@@ -8,6 +8,7 @@ const subTitle = "Ovde možete ostaviti svoj";
 const title = "CV";
 
 const [message, setMessage] = useState('');
+const [disableDugme, setDisableDugme] = useState(false);
 
 const posaljiCV = (e) => {
     e.preventDefault();
@@ -29,6 +30,8 @@ const posaljiCV = (e) => {
         return;
     }
 
+    setDisableDugme(true);
+
     const cvFajl = e.target.cv.files[0];
 
     const formData = new FormData();
@@ -39,6 +42,7 @@ const posaljiCV = (e) => {
     formData.append('prezime', prezime);
     formData.append('email', email);
     formData.append('broj_telefona', telefon);
+    setMessage('Slanje u toku...');
 
     axios.post('api/leave-cv', formData).then((res) => {
         setMessage(res.data.message);
@@ -106,7 +110,7 @@ const posaljiCV = (e) => {
                     <Row>
                         <Col>
                             <div className="course-btn">
-                                <Button variant="primary" type="submit">Posalji CV</Button>
+                                <Button disabled={disableDugme} variant="primary" type="submit">Posalji CV</Button>
                             </div>
                         </Col>
                     </Row>
