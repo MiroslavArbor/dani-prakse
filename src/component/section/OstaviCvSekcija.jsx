@@ -17,9 +17,15 @@ const posaljiCV = (e) => {
     const email = e.target.email.value;
     const telefon = e.target.telefon.value;
     const cv = e.target.cv.value;
+    const consent = e.target.consent.checked
 
     if (!ime || !prezime || !email || !telefon || !cv) {
         setMessage('Morate popuniti sva polja.')
+        return;
+    }
+
+    if(!consent){
+        setMessage('Morate se saglasiti sa uslovima korišćenja Vaših podataka')
         return;
     }
 
@@ -78,6 +84,14 @@ const posaljiCV = (e) => {
                             <Form.Group className="mb-3" id="telefon">
                                 <Form.Label>Telefon</Form.Label>
                                 <Form.Control name="telefon" type="text" placeholder="Unesite broj telefon" />
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <Form.Group className="mb-3" id="consent">
+                                <Form.Label>Saglasan/saglasna sam da se moji podaci koriste za potrebe projekta</Form.Label>
+                                <Form.Check name="consent" type="checkbox" id="consent" />
                             </Form.Group>
                         </Col>
                     </Row>
