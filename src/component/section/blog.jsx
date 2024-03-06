@@ -3,7 +3,9 @@ import {useState} from "react";
 import {Button} from "react-bootstrap";
 
 import vest1 from '../../assets/images/vesti/vest1.jpeg';
+import vest3 from '../../assets/images/vesti/vest3.jpg';
 import LinkedInRadionicaVest from "../vesti/LinkedInRadionicaVest";
+import BancaIntesaVest from "../vesti/BancaIntesaVest";
 
 
 const subTitle = "PROČITAJTE NAJNOVIJE";
@@ -19,6 +21,20 @@ const blogList = [
         date: 'Decembar 10, 2023',
         short: 'Početak decembra bio je u znaku LinkedIn-a. Andjela Bogićević, alumni član Savez studenata Fakulteta organizacionih nauka održala je radionicu kroz koju smo se upoznali sa mogućnostima koje nudi ova poslovna mreža.',
         longText: <LinkedInRadionicaVest />,
+        btnText: 'Pročitaj više',
+    },
+
+]
+
+const blogList1 = [
+    {
+        imgUrl: vest3,
+        imgAlt: 'blog thumb rajibraj91 rajibraj',
+        title: 'BIB Future Gen - Banca Intesa',
+        author: 'Andrea Živančević',
+        date: 'Mart 6, 2024',
+        short: 'Ukoliko si na završnoj godini fakulteta ili već poseduješ diplomu, nemaš iskustva u struci, a želiš da ga stekneš u kompaniji koja će ti pružiti punu mentorsku podršku i priliku da radiš na interesantnim zadacima i projektima, prijavi se na naš četvoromesečni program plaćene prakse sa nepunim radnim vremenom.',
+        longText: <BancaIntesaVest />,
         btnText: 'Pročitaj više',
     },
 
@@ -79,6 +95,43 @@ const Blog = () => {
                                 </div>
                             </div>
                         ))}
+                            {blogList1.map((val, i) => (
+                                <div className="col" key={i}>
+                                    <div className="post-item">
+                                        <div className="post-inner">
+                                            <div className="post-thumb">
+                                                <Link to="#"><img width={370} height={250} src={`${val.imgUrl}`}
+                                                                             alt={`${val.imgAlt}`}/></Link>
+                                            </div>
+                                            <div className="post-content">
+                                                <Link to="#"><h4>{val.title}</h4></Link>
+                                                <div className="meta-post">
+                                                    <ul className="lab-ul">
+                                                        <li><i className="icofont-ui-user"></i>{val.author}</li>
+                                                        <li><i className="icofont-calendar"></i>{val.date}</li>
+                                                    </ul>
+                                                </div>
+                                                <p>{val.short}</p>
+                                            </div>
+                                            <div className="post-footer">
+                                                <div className="pf-left">
+                                                    <div className="course-btn">
+                                                    <Button onClick={() => {
+                                                        prikaziVestHandler(val);
+                                                        window.scrollTo({
+                                                            top: 500,
+                                                            left: 100,
+                                                            behavior: "smooth",
+                                                        });
+                                                    }} className="lab-btn-text">{val.btnText}</Button>
+                                                    </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}    
+                        
                     </div>
                 </div>) : (
                     <>
