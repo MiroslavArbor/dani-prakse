@@ -8,6 +8,7 @@ const subTitle = "Ovde možete ostaviti svoj";
 const title = "CV";
 
 const [message, setMessage] = useState('');
+const [disableDugme, setDisableDugme] = useState(false);
 
 const posaljiCV = (e) => {
     e.preventDefault();
@@ -17,11 +18,19 @@ const posaljiCV = (e) => {
     const email = e.target.email.value;
     const telefon = e.target.telefon.value;
     const cv = e.target.cv.value;
+    const consent = e.target.consent.checked
 
     if (!ime || !prezime || !email || !telefon || !cv) {
         setMessage('Morate popuniti sva polja.')
         return;
     }
+
+    if(!consent){
+        setMessage('Morate se saglasiti sa uslovima korišćenja Vaših podataka')
+        return;
+    }
+
+    setDisableDugme(true);
 
     const cvFajl = e.target.cv.files[0];
 
@@ -33,8 +42,9 @@ const posaljiCV = (e) => {
     formData.append('prezime', prezime);
     formData.append('email', email);
     formData.append('broj_telefona', telefon);
+    setMessage('Slanje u toku...');
 
-    axios.post('/leave-cv', formData).then((res) => {
+    axios.post('api/leave-cv', formData).then((res) => {
         setMessage(res.data.message);
         console.log(res);
     }).catch((err) => {
@@ -83,6 +93,14 @@ const posaljiCV = (e) => {
                     </Row>
                     <Row>
                         <Col>
+                            <Form.Group className="mb-3" id="consent">
+                                <Form.Label>Saglasan/saglasna sam da se moji podaci koriste za potrebe projekta</Form.Label>
+                                <Form.Check name="consent" type="checkbox" id="consent" />
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
                             <Form.Group className="mb-3" id="fajl">
                                 <Form.Label>CV</Form.Label>
                                 <Form.Control name="cv" type="file" />
@@ -92,7 +110,7 @@ const posaljiCV = (e) => {
                     <Row>
                         <Col>
                             <div className="course-btn">
-                                <Button variant="primary" type="submit">Posalji CV</Button>
+                                <Button disabled={disableDugme} variant="primary" type="submit">Posalji CV</Button>
                             </div>
                         </Col>
                     </Row>

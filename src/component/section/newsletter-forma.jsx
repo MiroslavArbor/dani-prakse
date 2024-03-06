@@ -21,7 +21,7 @@ const prijaviSe = (e) => {
         return;
     }
 
-    axiosInstance.post('/create-subscription', {
+    axiosInstance.post('api/create-subscription', {
         email: email,
     }).then((res) => {
         setMessage(res.data.message);

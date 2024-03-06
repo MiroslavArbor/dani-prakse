@@ -3,7 +3,7 @@ import React from 'react';
 import marija from "../../assets/images/panelisti/marija.jpeg";
 import milos from "../../assets/images/panelisti/milos.jpeg";
 import maksa from "../../assets/images/panelisti/maksa.jpeg";
-import bojan from "../../assets/images/panelisti/bojan.jpeg";
+import bojan from "../../assets/images/panelisti/bojan-new.jpeg";
 import nebojsa from "../../assets/images/panelisti/nebojsa.png";
 
 const PanelDiskusija = () => {

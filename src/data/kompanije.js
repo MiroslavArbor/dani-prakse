@@ -15,7 +15,7 @@ import bancaintesa from "../assets/images/kompanije/logoi/bancaintesa.png";
 import dex from "../assets/images/kompanije/logoi/dex.png";
 import kreston from "../assets/images/kompanije/logoi/kreston.png";
 import mercator from "../assets/images/kompanije/logoi/mercator.png";
-
+import generali from "../assets/images/kompanije/logoi/generali.png";
 import milsped from "../assets/images/kompanije/logoi/milsped.png";
 import metropol from "../assets/images/kompanije/logoi/metropol.png";
 import casestudyclub from "../assets/images/kompanije/logoi/casestudyclub.png";
@@ -36,6 +36,8 @@ import Mercator from '../component/kompanije/Mercator';
 import MILSPEDGROUP from '../component/kompanije/MILSPED';
 import Wiener from '../component/kompanije/Wiener';
 import NBsoft from '../component/kompanije/NBsoft';
+import Generali from '../component/kompanije/Generali';
+
 
 
 const kompanije = [
@@ -164,7 +166,7 @@ const kompanije = [
                 idKompanije: 3,
                 naziv: 'Transfera',
                 skraceniTekst: 'Kompanija Transfera, najbrže rastuća logistička kompanija u Srbiji, prethodne godine je obeležila deceniju uspešnog poslovanja, tokom koje se razvila u jednog od regionalnih lidera u domenu transporta, carinskog zastupanja, skladišno – manipulativnih operacija i distribucije.',
-                kompanijaStranica: <Transfera/>,
+                kompanijaStranica: <Transfera />,
                 slika: transfera,
                 klasa: 'medium',
                 link: 'https://www.nestle.com/',
@@ -174,7 +176,7 @@ const kompanije = [
                 id: 4,
                 naziv: 'Banca Intesa',
                 skraceniTekst: 'Mi smo velika ekipa sa više od 3.000 zaposlenih koji svakodnevno brinu o potrebama više od 1,3 miliona klijenata. Kroz izvrsnost naših usluga i proizvoda negujući dugoročne odnose Zajedno, stvaramo inovacije i dodatnu vrednost, gradeći održivu budućnost posvećeni očuvanju životne sredine, mladim generacijama i izgradnji inkluzivnog društva.',
-                kompanijaStranica: <BancaIntesa/>,
+                kompanijaStranica: <BancaIntesa />,
                 slika: bancaintesa,
                 klasa: 'medium',
                 link: 'https://www.bancaintesa.rs/',
@@ -184,7 +186,7 @@ const kompanije = [
                 id: 5,
                 naziv: 'Dex',
                 skraceniTekst: 'Kompanija Dex, s više od tri decenije uspešnog razvoja i primeni informacionih tehnologija u Srbiji i regionu Jugoistočne Evrope, predstavlja spoj stručnosti i iskustva. Naš tim čine stručnjaci iz različitih industrijskih oblasti, čiji timski duh i efikasnost omogućavaju postizanje maksimalnih rezultata. Već dugi niz godina istrajemo kao uspešna i renomirana kompanija.',
-                kompanijaStranica: <Dex/>,
+                kompanijaStranica: <Dex />,
                 slika: dex,
                 klasa: 'medium',
                 link: 'https://dex.com/',
@@ -194,7 +196,7 @@ const kompanije = [
                 id: 6,
                 naziv: 'Kreston',
                 skraceniTekst: 'Kreston MDM Revizija d.o.o. je kompanija u kojoj budućnost poslovanja postaje realnost, a učenje, napredovanje i podrška su susuština našeg uspeha. Osnovani pre više od 15 godina, postali smo sinonim za stručnost u oblasti revizije, računovodstva i poreskog savetovanja.',
-                kompanijaStranica: <Kreston/>,
+                kompanijaStranica: <Kreston />,
                 slika: kreston,
                 klasa: 'medium',
                 link: 'https://www.kreston.com/',
@@ -204,7 +206,7 @@ const kompanije = [
                 id: 7,
                 naziv: 'Mercator-S',
                 skraceniTekst: 'Mi smo Mercator-S, članica Fortenova grupe. Sa više od 340 prodavnica različitih formata, prisutni smo, kao jedini trgovački lanac, u svim regionima Srbije. Pokrivamo sve šoping misije, od svakodnevne nabavke, preko velikih porodičnih snabdevanja, do premijum kupovine. Imamo i 4 Velpro i jedan Horeca centar. Naš tim broji više od 8.000 vrednih i posvećenih kolega koji svakog dana usluže više od 300.000 potrošača. Uvek smo blizu kupaca, od online do offline iskustva, sa širokom ponudom domaćih, regionalnih i međunarodnih brendova, sa odličnom ponudom domaćih proizvoda, od 100% domaćeg mesa do našeg brenda „Ukusi moga kraja“.',
-                kompanijaStranica: <Mercator/>,
+                kompanijaStranica: <Mercator />,
                 slika: mercator,
                 klasa: 'medium',
                 link: 'https://mercatorcentar.rs/',
@@ -220,7 +222,7 @@ const kompanije = [
                 idKompanije: 1,
                 naziv: 'Wiener Städtische osiguranje',
                 skraceniTekst: 'Wiener Städtische osiguranje deo je vodeće austrijske osiguravajuće kompanije Vienna Insurance Group (VIG), lidera u centralnoj i istočnoj Evropi, sa tradicijom dugom skoro dva veka. U Srbiji uspešno poslujemo od 2003. godine i danas imamo poslovnu mrežu u skoro 40 gradova sa više od 1.100 zaposlenih. Misija Wiener Städtische osiguranja je da obezbedi finansijsku sigurnost kroz proizvode i usluge koji zadovoljavaju najviše standarde i odgovaraju potrebama osiguranika.',
-                kompanijaStranica: <Wiener/>,
+                kompanijaStranica: <Wiener />,
                 slika: wiener,
                 klasa: 'light',
                 link: 'https://wiener.co.rs/',
@@ -230,10 +232,20 @@ const kompanije = [
                 idKompanije: 2,
                 naziv: 'NB Soft',
                 skraceniTekst: 'Platforma za online prodaju sa zaokruženim order menadžmentom. Integrisana je sa preko 30 ERP poslovnih sistema, 25 platnih sistema, 20 kurirskih službi, brojnim marketing servisima. Originalno domaće rešenje kreirano u skladu sa potrebama tržišta. Do sada je realizovano preko 10 miliona porudžbina, 20 miliona registrovanih korisnika, preko dva miliona poseta dnevno!',
-                kompanijaStranica: <NBsoft/>,
+                kompanijaStranica: <NBsoft />,
                 slika: nbsoft,
                 klasa: 'light',
                 link: 'https://www.nbsoft.rs/rs',
+                prikaziDugme: true
+            },
+            {
+                idKompanije: 3,
+                naziv: 'Generali',
+                skraceniTekst: 'Generali Osiguranje Srbija je druga najveća osiguravajuća kompanija na domaćem tržištu osiguranja, na kojem brižljivo gradi Generali svet od 2006. godine. Ponosimo se činjenicom da smo lideri u oblasti osiguranja života i doborovoljnog zdravstvenog osiguranja u našoj zemlji, a uspešnismo i u drugim granama osiguranja kao što su autoodgovornost, imovina...',
+                kompanijaStranica: <Generali />,
+                slika: generali,
+                klasa: 'light',
+                link: 'https://generali.rs',
                 prikaziDugme: true
             },
         ]

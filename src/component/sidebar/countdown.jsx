@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import {Container} from "react-bootstrap";
 
 const subTitle = "Do projekta je preostalo";
 const title = "JOŠ";

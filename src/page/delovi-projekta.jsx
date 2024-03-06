@@ -20,7 +20,6 @@ import spreman7 from '../assets/images/delovi/spreman/7.jpg';
 import spreman8 from '../assets/images/delovi/spreman/8.jpg';
 import spreman9 from '../assets/images/delovi/spreman/9.jpg';
 import takmicarski1 from '../assets/images/delovi/takmicarski/1.jpg';
-import takmicarski2 from '../assets/images/delovi/takmicarski/2.jpeg';
 import sajam1 from '../assets/images/delovi/sajam/1.jpeg';
 import sajam2 from '../assets/images/delovi/sajam/2.jpg';
 import sajam3 from '../assets/images/delovi/sajam/3.jpg';
@@ -78,7 +77,7 @@ const DeloviProjekta = () => {
                 id: 5,
                 naziv: 'Takmičarski deo',
                 text: <TakmicarskiDeoFragment />,
-                slike: [takmicarski1, takmicarski2]
+                slike: [takmicarski1]
             },
             {
                 id: 6,
